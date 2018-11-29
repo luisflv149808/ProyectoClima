@@ -54,6 +54,16 @@ public class MyHeaderRecyclerAdapter extends  RecyclerView.Adapter<RecyclerView.
 
 
     @Override
+
+
+    /*
+
+    Agarra los moldes creados y los llena de datos
+    VHHeader = molde
+    VhHEADER.fecha otro molde
+
+     */
+
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         if(holder instanceof VHHeader)
         {
@@ -68,6 +78,9 @@ public class MyHeaderRecyclerAdapter extends  RecyclerView.Adapter<RecyclerView.
             VHheader.ProbLluvia.setText(header.getProbLluvia());
             VHheader.VelViento.setText(header.getVelViento());
             VHheader.Humedad.setText(header.getHumedad());
+
+            //Metodo para formatear el icono
+            //El icono llega en texto, se formatea el texto en imagen
 
             if(header.getIcono().equals("clear-day")){
                 Drawable img = context.getResources().getDrawable( R.drawable.clearday);
